@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "0.1.32" %}
+{% set version = "0.1.32.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d58fe7ff00328cac0793211f8852b0909249fb53415e1b38a7ff45e73572eade
+  sha256: f1e6fa3371777040ceec4ee604ee8c7a4f65eca8543fe743a3204712df00630f
 
 build:
   noarch: python
@@ -35,7 +35,7 @@ requirements:
     - cryptography >=2.4.2
     - google-auth >=1.6.1
     - requests-toolbelt >=0.8
-    - cloudpickle
+    - cloudpickle =1.1.1
     - kfp-server-api >=0.1.18,<=0.1.100
     - argo-models =2.3.0.post1
     - jsonschema >=3.0.1
