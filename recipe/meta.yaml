@@ -35,7 +35,7 @@ requirements:
     - cryptography >=2.4.2
     - google-auth >=1.6.1
     - requests-toolbelt >=0.8
-    - cloudpickle
+    - cloudpickle =1.1.1
     - kfp-server-api >=0.1.18,<=0.1.100
     - argo-models =2.3.0.post1
     - jsonschema >=3.0.1
