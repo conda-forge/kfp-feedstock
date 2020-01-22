@@ -30,7 +30,7 @@ requirements:
     - python-dateutil
     - PyYAML
     - google-cloud-storage >=1.13
-    - python-kubernetes >=8,<=9
+    - python-kubernetes >=8,<=10
     - PyJWT >=1.6.4
     - cryptography >=2.4.2
     - google-auth >=1.6.1
