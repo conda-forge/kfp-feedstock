@@ -124,4 +124,6 @@ Feedstock Maintainers
 * [@maximerihouey](https://github.com/maximerihouey/)
 * [@ncolomer](https://github.com/ncolomer/)
 * [@nicolas-geniteau](https://github.com/nicolas-geniteau/)
+* [@radcheb](https://github.com/radcheb/)
+* [@tanguycdls](https://github.com/tanguycdls/)
 
