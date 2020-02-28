@@ -47,8 +47,6 @@ requirements:
 test:
   imports:
     - kfp
-  requires:
-    - unittest
   commands:
     - python3 -m unittest discover --verbose --start-dir tests --top-level-directory=.
 
