@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "0.2.4.1" %}
+{% set version = "0.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 87bb977ee9c0614b04f70c03690a11389a012606de7984ae13b8ea8c2f18e041
+  sha256: ade96fa8a91287e395205f6afbad053beb19a9b7cb3926fd34fb35f18b7178e9
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - dsl-compile = kfp.compiler.main:main
     - kfp=kfp.__main__:main
@@ -42,6 +42,7 @@ requirements:
     - tabulate =0.8.3
     - click =7.0
     - Deprecated
+    - strip-hints
 
 test:
   imports:
