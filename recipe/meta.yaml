@@ -42,7 +42,7 @@ requirements:
     - tabulate =0.8.3
     - click =7.0
     - Deprecated
-    #- strip-hints
+    - strip-hints
 
 test:
   imports:
