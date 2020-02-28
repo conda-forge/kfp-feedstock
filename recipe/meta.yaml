@@ -47,9 +47,6 @@ requirements:
 test:
   imports:
     - kfp
-  commands:
-    - python3 -m unittest discover --verbose --start-dir tests --top-level-directory=.
-
 
 about:
   home: https://github.com/kubeflow/pipelines
