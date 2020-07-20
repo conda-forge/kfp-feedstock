@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 31cb22459fa65e5a02b4dc7c822f76d2f18d76ef2aef9155fb2fe04c9490dfa4
+  sha256: fe85dc2091a4dabb3ba2caabcaa9690758765b48aab99db0888ab3674a80d436
 
 build:
   noarch: python
@@ -24,23 +24,16 @@ requirements:
     - pip
   run:
     - python >=3.5.3
-    - urllib3 >=1.15,<1.25
-    - six >=1.10
-    - certifi
-    - python-dateutil
     - PyYAML
-    - google-cloud-storage >=1.13
-    - python-kubernetes >=8,<=10
-    - PyJWT >=1.6.4
-    - cryptography >=2.4.2
+    - google-cloud-storage >=1.13.0
+    - python-kubernetes >=8.0.0,<12.0.0
     - google-auth >=1.6.1
-    - requests-toolbelt >=0.8
-    - cloudpickle =1.1.1
-    - kfp-server-api >=0.1.18,<=0.1.100
-    - argo-models =2.3.0.post1
+    - requests-toolbelt >=0.8.0
+    - cloudpickle
+    - kfp-server-api >=0.2.5,<0.6.0
     - jsonschema >=3.0.1
-    - tabulate =0.8.3
-    - click =7.0
+    - tabulate
+    - click
     - Deprecated
     - strip-hints
 
