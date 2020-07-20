@@ -30,7 +30,7 @@ requirements:
     - google-auth >=1.6.1
     - requests-toolbelt >=0.8.0
     - cloudpickle
-    - kfp-server-api >=0.2.5,<0.6.0
+    - kfp-server-api >=0.2.5,<2.0.0
     - jsonschema >=3.0.1
     - tabulate
     - click
