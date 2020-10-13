@@ -5,10 +5,14 @@ Home: https://github.com/kubeflow/pipelines
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kfp-feedstock/blob/master/LICENSE.txt)
 
 Summary: Reusable end-to-end ML workflows built using the Kubeflow Pipelines SDK.
 
+
+Development: https://github.com/kubeflow/pipelines/tree/master/sdk/python
+
+Documentation: https://www.kubeflow.org/docs/pipelines/
 
 Kubeflow is a machine learning (ML) toolkit that is dedicated to making
 deployments of ML workflows on Kubernetes simple, portable, and scalable.
