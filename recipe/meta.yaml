@@ -36,7 +36,7 @@ requirements:
     - click
     - Deprecated
     - strip-hints
-    - docstring-parser
+    - docstring_parser
 
 test:
   imports:
