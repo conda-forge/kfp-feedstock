@@ -25,18 +25,18 @@ requirements:
   run:
     - python >=3.5.3
     - PyYAML
-    - google-cloud-storage >=1.13.0
-    - python-kubernetes >=8.0.0,<12.0.0
+    - google-cloud-storage >=1.13
+    - python-kubernetes >=8,<12
     - google-auth >=1.6.1
-    - requests-toolbelt >=0.8.0
     - cloudpickle
-    - kfp-server-api >=0.2.5,<2.0.0
+    - kfp-server-api >=1.1.12,<=2.0.0
     - jsonschema >=3.0.1
     - tabulate
     - click
     - Deprecated
     - strip-hints
-    - docstring_parser
+    - docstring-parser >=0.7.3
+    - kfp-pipeline-spec >=0.1.0,<0.2.0
 
 test:
   imports:
