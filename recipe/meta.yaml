@@ -12,7 +12,9 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    - {{ PYTHON }} -m pip install kfp-pipeline-spec==0.1.4 -vv
+    - {{ PYTHON }} -m pip install . -vv
   entry_points:
     - dsl-compile = kfp.compiler.main:main
     - kfp=kfp.__main__:main
@@ -35,8 +37,7 @@ requirements:
     - click
     - Deprecated
     - strip-hints
-    - docstring-parser >=0.7.3
-    - kfp-pipeline-spec >=0.1.0,<0.2.0
+    - docstring_parser >=0.7.3
 
 test:
   imports:
