@@ -36,6 +36,7 @@ requirements:
     - Deprecated
     - strip-hints
     - docstring_parser >=0.7.3
+    - requests-toolbelt >=0.8.0
 
 test:
   imports:
