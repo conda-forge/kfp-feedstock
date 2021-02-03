@@ -24,12 +24,12 @@ requirements:
     - pip
   run:
     - python >=3.5.3
-    - PyYAML
+    - PyYAML >=5.3
     - google-cloud-storage >=1.13
     - python-kubernetes >=8,<12
     - google-auth >=1.6.1
     - cloudpickle
-    - kfp-server-api >=1.1.12,<=2.0.0
+    - kfp-server-api >=1.1.2,<=2.0.0
     - jsonschema >=3.0.1
     - tabulate
     - click
