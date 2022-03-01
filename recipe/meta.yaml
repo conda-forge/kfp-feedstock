@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a330a65c2b57611e812614dce4e7dd81c9d77102afb3e4ab1305ba79bcf8f719
+  sha256: 2c9c4169342fb3d185adcc68fab32be7e9b2b525575fee3cb2a3f8b77f626495
 
 build:
   noarch: python
@@ -26,12 +26,21 @@ requirements:
     - python >=3.6.1
     - absl-py >=0.9,<=0.11
     - PyYAML >=5.3,<6
+    # `Blob.from_string` was introduced in google-cloud-storage 1.20.0
+    # https://github.com/googleapis/python-storage/blob/master/CHANGELOG.md#1200
     - google-cloud-storage >=1.20.0,<2
     - python-kubernetes >=8.0.0,<13
+    # google-api-python-client v2 doesn't work for private dicovery by default:
+    # https://github.com/googleapis/google-api-python-client/issues/1225#issuecomment-791058235
     - google-api-python-client >=1.7.8,<2
     - google-auth >=1.6.1,<2
     - requests-toolbelt >=0.8.0,<1
     - cloudpickle >=1.3.0,<2
+    # Update the upper version whenever a new major version of the
+    # kfp-server-api package is released.
+    # Update the lower version when kfp sdk depends on new apis/fields in
+    # kfp-server-api.
+    # Note, please also update ./requirements.in
     - kfp-server-api >=1.1.2,<2.0.0
     - jsonschema >=3.0.1,<4
     - tabulate >=0.8.6,<1
