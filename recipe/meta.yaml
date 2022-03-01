@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "1.4.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 56e28e0e760216d0ff71fe4c6596c2eda9342ecdfda27ee69f3b4b94784e3b2d
+  sha256: 2c3fd348f8caca14299944c80dccbced2f9f82c99c97277d274319104280d5ac
 
 build:
   noarch: python
@@ -24,20 +24,23 @@ requirements:
     - pip
   run:
     - python >=3.5.3
-    - PyYAML >=5.3
-    - google-cloud-storage >=1.13
-    - python-kubernetes >=8,<12
-    - google-auth >=1.6.1
-    - cloudpickle
-    - kfp-server-api >=1.1.2,<=2.0.0
-    - jsonschema >=3.0.1
-    - tabulate
-    - click
-    - Deprecated
-    - strip-hints
-    - docstring_parser >=0.7.3
-    - requests-toolbelt >=0.8.0
-    - fire >=0.3.1
+    - PyYAML >=5.3,<6
+    - google-cloud-storage >=1.20.0,<2
+    - python-kubernetes >=8,<13
+    - google-api-python-client >=1.7.8,<2
+    - google-auth >=1.6.1,<2
+    - cloudpickle >=1.3.0,<2
+    - kfp-server-api >=1.1.2,<2.0.0
+    - kfp-pipeline-spec>=0.1.7,<0.2.0
+    - jsonschema >=3.0.1,<4
+    - tabulate >=0.8.6,<1
+    - click >=7.1.1,<8
+    - deprecated >=1.2.7,<2
+    - strip-hints >=0.1.8,<1
+    - docstring_parser >=0.7.3,<1
+    - requests-toolbelt >=0.8.0,<1
+    - fire >=0.3.1,<1
+    - protobuf >=3.13.0,<4
     - absl-py >=0.9,<=0.11
 
 test:
@@ -68,3 +71,4 @@ extra:
     - tanguycdls
     - radcheb
     - ckadner
+    - manuelwalserqc
