@@ -43,7 +43,7 @@ requirements:
     - fire >=0.3.1,<1
     - protobuf >=3.13.0,<4
     # dataclasses is a backport of python 3.7 module
-    - dataclasses   # [py==36]
+    - dataclasses
 
 test:
   requires:
