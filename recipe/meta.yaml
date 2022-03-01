@@ -53,6 +53,7 @@ requirements:
     - protobuf >=3.13.0,<4
     # dataclasses is a backport of python 3.7 module
     - dataclasses
+    - pydantic >=1.8.2,<2
 
 test:
   requires:
