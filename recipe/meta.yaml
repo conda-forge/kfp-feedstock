@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "1.8.2" %}
+{% set version = "1.8.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 86007863a24e1589c30b7077225a98a87c6cdfa212300071010206a6c76a6f9b
+  sha256: c516ef0a222ecdae77a429ab14b799df9e9b561a4638a91c90719ad28eaa650c
 
 build:
   noarch: python
@@ -56,6 +56,7 @@ requirements:
     - protobuf >=3.13.0,<4
     - pydantic >=1.8.2,<2
     - typing-extensions >=3.10.0.2,<4
+    - uritemplate >=3.0.1,<4
 
 test:
   requires:
