@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "1.7.2" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 199c576693713ac57ee6a4f3df34172cb85c76d9266042073500421cedde44f5
+  sha256: 1e683bf27bae690da7d69aefceb25d242ae2141e219a9cfc492dad1114bbdcf4
 
 build:
   noarch: python
@@ -20,10 +20,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6.1
+    - python >=3.7
     - pip
   run:
-    - python >=3.6.1
+    - python >=3.7
     - absl-py >=0.9,<=0.11
     - PyYAML >=5.3,<6
     # `Blob.from_string` was introduced in google-cloud-storage 1.20.0
@@ -33,6 +33,9 @@ requirements:
     # google-api-python-client v2 doesn't work for private dicovery by default:
     # https://github.com/googleapis/google-api-python-client/issues/1225#issuecomment-791058235
     - google-api-python-client >=1.7.8,<2
+    # NOTE: Maintainers, please do not require google-auth>=2.x.x
+    # Until this issue is closed
+    # https://github.com/googleapis/google-cloud-python/issues/10566
     - google-auth >=1.6.1,<2
     - requests-toolbelt >=0.8.0,<1
     - cloudpickle >=1.3.0,<2
@@ -48,11 +51,9 @@ requirements:
     - deprecated >=1.2.7,<2
     - strip-hints >=0.1.8,<1
     - docstring_parser >=0.7.3,<1
-    - kfp-pipeline-spec >=0.1.9,<0.2.0
+    - kfp-pipeline-spec >=0.1.13,<0.2.0
     - fire >=0.3.1,<1
     - protobuf >=3.13.0,<4
-    # dataclasses is a backport of python 3.7 module
-    - dataclasses
     - pydantic >=1.8.2,<2
 
 test:
