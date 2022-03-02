@@ -29,8 +29,10 @@ requirements:
     # `Blob.from_string` was introduced in google-cloud-storage 1.20.0
     # https://github.com/googleapis/python-storage/blob/master/CHANGELOG.md#1200
     - google-cloud-storage >=1.20.0,<2
-    - google-api-python-client >=1.7.8,<2
     - python-kubernetes >=8.0.0,<13
+    # google-api-python-client v2 doesn't work for private dicovery by default:
+    # https://github.com/googleapis/google-api-python-client/issues/1225#issuecomment-791058235
+    - google-api-python-client >=1.7.8,<2
     # NOTE: Maintainers, please do not require google-auth>=2.x.x
     # Until this issue is closed
     # https://github.com/googleapis/google-cloud-python/issues/10566
@@ -52,9 +54,9 @@ requirements:
     - kfp-pipeline-spec >=0.1.13,<0.2.0
     - fire >=0.3.1,<1
     - protobuf >=3.13.0,<4
-    - pydantic >=1.8.2,<2
     # dataclasses is a backport of python 3.7 module
     - dataclasses >=0.8,<1
+    - pydantic >=1.8.2,<2
 
 test:
   requires:
