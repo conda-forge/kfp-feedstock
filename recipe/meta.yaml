@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - dsl-compile = kfp.compiler.main:main
@@ -29,7 +29,7 @@ requirements:
     # `Blob.from_string` was introduced in google-cloud-storage 1.20.0
     # https://github.com/googleapis/python-storage/blob/master/CHANGELOG.md#1200
     - google-cloud-storage >=1.20.0,<2
-    - python-kubernetes >=8.0.0,<13
+    - python-kubernetes >=8.0.0,<19
     # google-api-python-client v2 doesn't work for private dicovery by default:
     # https://github.com/googleapis/google-api-python-client/issues/1225#issuecomment-791058235
     - google-api-python-client >=1.7.8,<2
@@ -51,7 +51,7 @@ requirements:
     - deprecated >=1.2.7,<2
     - strip-hints >=0.1.8,<1
     - docstring_parser >=0.7.3,<1
-    - kfp-pipeline-spec >=0.1.9,<0.2.0
+    - kfp-pipeline-spec >=0.1.10,<0.2.0
     - fire >=0.3.1,<1
     - protobuf >=3.13.0,<4
     - pydantic >=1.8.2,<2
