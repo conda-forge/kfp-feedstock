@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - dsl-compile = kfp.compiler.main:main
@@ -51,7 +51,7 @@ requirements:
     - deprecated >=1.2.7,<2
     - strip-hints >=0.1.8,<1
     - docstring_parser >=0.7.3,<1
-    - kfp-pipeline-spec >=0.1.13,<0.2.0
+    - kfp-pipeline-spec >=0.1.9,<0.2.0
     - fire >=0.3.1,<1
     - protobuf >=3.13.0,<4
     - pydantic >=1.8.2,<2
