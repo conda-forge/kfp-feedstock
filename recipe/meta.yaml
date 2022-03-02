@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - dsl-compile = kfp.compiler.main:main
@@ -55,7 +55,7 @@ requirements:
     - fire >=0.3.1,<1
     - protobuf >=3.13.0,<4
     - pydantic >=1.8.2,<2
-    - typing-extensions >=3.10.0.2,<4
+    - typing-extensions >=3.7.4,<4
     - uritemplate >=3.0.1,<4
     - typer >=0.3.2,<1.0
 
