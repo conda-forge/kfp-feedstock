@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "1.8.6" %}
+{% set version = "1.8.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3722597da64208d9c992e999c7b2e2dd59b6c0aa7bf90a725dfcd8ab74436b33
+  sha256: 155c6bfbf87a29964d0da306a24f7ed1d4cafcd266c2c63f468a37213bbb852f
 
 build:
   noarch: python
@@ -51,7 +51,7 @@ requirements:
     - deprecated >=1.2.7,<2
     - strip-hints >=0.1.8,<1
     - docstring_parser >=0.7.3,<1
-    - kfp-pipeline-spec >=0.1.10,<0.2.0
+    - kfp-pipeline-spec >=0.1.13,<0.2.0
     - fire >=0.3.1,<1
     - protobuf >=3.13.0,<4
     - pydantic >=1.8.2,<2
