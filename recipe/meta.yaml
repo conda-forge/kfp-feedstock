@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "1.8.5" %}
+{% set version = "1.8.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fdafd5ff3fd12a550ed2a1f9e0dc49bdcb4aa83001263218246dd10a727d1824
+  sha256: 045c6cf35ef50414c76179e751bee63d9381cd2fc4c795bbe3bef44b7d7d0086
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - dsl-compile = kfp.compiler.main:main
