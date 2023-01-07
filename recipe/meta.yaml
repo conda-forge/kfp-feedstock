@@ -59,7 +59,7 @@ requirements:
     - typing-extensions >=3.7.4,<5
     - uritemplate >=3.0.1,<4
     - typer >=0.3.2,<1.0
-    - dataclasses>=0.8,<1
+    - dataclasses >=0.8,<1
 
 test:
   requires:
