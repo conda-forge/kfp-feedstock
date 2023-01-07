@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "1.8.15" %}
+{% set version = "1.8.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ea2c56b95132ceca9447a3effb4953b1617aa05502d2f49665e9b0f7a9c72161
+  sha256: 9bac0650f0628330229af464658468a50bee109c5a5c8dcc9caa52a2be592d4b
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ requirements:
     # NOTE: Maintainers, please do not require google-auth>=2.x.x
     # Until this issue is closed
     # https://github.com/googleapis/google-cloud-python/issues/10566
-    - google-auth >=1.6.1,<2
+    - google-auth >=1.6.1,<3
     - requests-toolbelt >=0.8.0,<1
     - cloudpickle >=2.0.0,<3
     # Update the upper version whenever a new major version of the
