@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "1.8.17" %}
+{% set version = "1.8.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 43e8bb147cd684780803ee86a505ca26c38b03641e0a830d8dcbc713513eb6fc
+  sha256: 1f0867d6ce0e1c36a708c0edfc1cfc1ee2f06e60daee4ad4684ee37e645c117d
 
 build:
   noarch: python
@@ -24,11 +24,11 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - absl-py >=0.9,<2
+    - absl-py >=0.9,<=0.11
     - PyYAML >=5.3,<6
     # `Blob.from_string` was introduced in google-cloud-storage 1.20.0
     # https://github.com/googleapis/python-storage/blob/master/CHANGELOG.md#1200
-    - google-cloud-storage >=1.20.0,<2
+    - google-cloud-storage >=2.2.1,<3
     - python-kubernetes >=8.0.0,<19
     # google-api-python-client v2 doesn't work for private dicovery by default:
     # https://github.com/googleapis/google-api-python-client/issues/1225#issuecomment-791058235
@@ -54,11 +54,12 @@ requirements:
     - docstring_parser >=0.7.3,<1
     - kfp-pipeline-spec >=0.1.16,<0.2.0
     - fire >=0.3.1,<1
-    - protobuf >=3.13.0,<4
+    #- protobuf >=3.13.0,<4
     - pydantic >=1.8.2,<2
     - typing-extensions >=3.7.4,<5
     - uritemplate >=3.0.1,<4
     - typer >=0.3.2,<1.0
+    - dataclasses >=0.8,<1
 
 test:
   requires:
