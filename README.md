@@ -161,4 +161,5 @@ Feedstock Maintainers
 * [@nicolas-geniteau](https://github.com/nicolas-geniteau/)
 * [@radcheb](https://github.com/radcheb/)
 * [@tanguycdls](https://github.com/tanguycdls/)
+* [@tarrade](https://github.com/tarrade/)
 
