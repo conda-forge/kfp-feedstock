@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "1.4.0" %}
+{% set version = "1.8.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 56e28e0e760216d0ff71fe4c6596c2eda9342ecdfda27ee69f3b4b94784e3b2d
+  sha256: 1f0867d6ce0e1c36a708c0edfc1cfc1ee2f06e60daee4ad4684ee37e645c117d
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ build:
 
 requirements:
   host:
-    - python >=3.5.3
+    - python >=3.5
     - pip
   run:
     - python >=3.5
@@ -41,6 +41,10 @@ requirements:
     - fire >=0.3.1
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - kfp
 
@@ -68,3 +72,5 @@ extra:
     - tanguycdls
     - radcheb
     - ckadner
+    - manuelwalserqc
+    - tarrade
