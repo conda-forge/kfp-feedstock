@@ -27,7 +27,7 @@ requirements:
     - google-cloud-storage >=1.13.0
     - python-kubernetes >=8.0.0,<12.0.0
     - google-auth >=1.6.1
-    - requests-toolbelt >=0.8.0
+    - requests-toolbelt >=0.8.0,<1.0.0
     - cloudpickle
     - kfp-server-api >=1.1.2,<2.0.0
     - jsonschema >=3.0.1
