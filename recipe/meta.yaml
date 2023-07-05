@@ -32,7 +32,7 @@ requirements:
     # `Blob.from_string` was introduced in google-cloud-storage 1.20.0
     # https://github.com/googleapis/python-storage/blob/master/CHANGELOG.md#1200
     - google-cloud-storage >=1.20.0,<3
-    - kubernetes >=8.0.0,<26
+    - python-kubernetes >=8.0.0,<26
     # google-api-python-client v2 doesnt work for private dicovery by default:
     # https://github.com/googleapis/google-api-python-client/issues/1225#issuecomment-791058235
     - google-api-python-client >=1.7.8,<2
@@ -48,9 +48,9 @@ requirements:
     - jsonschema >=3.0.1,<5
     - tabulate >=0.8.6,<1
     - click >=7.1.2,<9
-    - Deprecated >=1.2.7,<2
+    - deprecated >=1.2.7,<2
     - strip-hints >=0.1.8,<1
-    - docstring-parser >=0.7.3,<1
+    - docstring_parser >=0.7.3,<1
     - kfp-pipeline-spec >=0.1.16,<0.2.0
     - fire >=0.3.1,<1
     - protobuf >=3.13.0,<4
