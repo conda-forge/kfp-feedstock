@@ -1,11 +1,11 @@
-About kfp
-=========
+About kfp-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kfp-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/kubeflow/pipelines
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kfp-feedstock/blob/main/LICENSE.txt)
 
 Summary: Reusable end-to-end ML workflows built using the Kubeflow Pipelines SDK.
 
@@ -161,4 +161,5 @@ Feedstock Maintainers
 * [@nicolas-geniteau](https://github.com/nicolas-geniteau/)
 * [@radcheb](https://github.com/radcheb/)
 * [@tanguycdls](https://github.com/tanguycdls/)
+* [@tarrade](https://github.com/tarrade/)
 
