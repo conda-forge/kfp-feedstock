@@ -8,7 +8,7 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/kfp-{{ version }}.tar.gz
   sha256: a9c4cf6b66ed2319c8b5ec604d712ae7a25626e33c624eee10ac64f7218905ee
-  
+
 build:
   noarch: python
   entry_points:
