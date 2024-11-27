@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kfp-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/kfp-{{ version }}.tar.gz
   sha256: 936b34261d7356f5f1960d07d12632a84f36f928e14a72cea7c092f2a224de7d
 
 build:
@@ -19,10 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - click >=8.0.0,<9
     - docstring_parser >=0.7.3,<1
     - google-api-core >=1.31.5,<3.0.0,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
@@ -47,6 +48,7 @@ test:
     - kfp --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/kubeflow/pipelines
