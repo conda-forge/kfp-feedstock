@@ -1,13 +1,13 @@
 {% set name = "kfp" %}
-{% set version = "2.8.0" %}
+{% set version = "2.9.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kfp-{{ version }}.tar.gz
-  sha256: 06ad584eecbe80318c6cd0231c95a432e91fec56f201def9d511b6e6664235ce
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/kfp-{{ version }}.tar.gz
+  sha256: 936b34261d7356f5f1960d07d12632a84f36f928e14a72cea7c092f2a224de7d
 
 build:
   noarch: python
@@ -19,18 +19,19 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - click >=8.0.0,<9
     - docstring_parser >=0.7.3,<1
     - google-api-core >=1.31.5,<3.0.0,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
     - google-auth >=1.6.1,<3
     - google-cloud-storage >=2.2.1,<3
-    - kfp-pipeline-spec ==0.3.0
-    - kfp-server-api >=2.0.0,<2.1.0
-    - python-kubernetes >=8.0.0,<27
+    - kfp-pipeline-spec ==0.4.0
+    - kfp-server-api >=2.1.0,<2.4.0
+    - python-kubernetes >=8.0.0,<31
     - protobuf >=4.21.1,<5
     - pyyaml >=5.3,<7
     - requests-toolbelt >=0.8.0,<1
@@ -47,6 +48,7 @@ test:
     - kfp --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/kubeflow/pipelines
