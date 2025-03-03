@@ -1,5 +1,5 @@
 {% set name = "kfp" %}
-{% set version = "2.11.0" %}
+{% set version = "2.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/kfp-{{ version }}.tar.gz
-  sha256: 7195019246f800fb842bb071c8d3a106ca3d2e812540f90a6b23c3ed19207ae5
+  sha256: daf5a262d08325e4343f07700c8ac7f494c1705e5cd33678fa4dec8fa42d221e
 
 build:
   noarch: python
@@ -30,11 +30,11 @@ requirements:
     - google-auth >=1.6.1,<3
     - google-cloud-storage >=2.2.1,<3
     - kfp-pipeline-spec ==0.6.0
-    - kfp-server-api >=2.1.0,<2.4.0
+    - kfp-server-api >=2.1.0,<2.5.0
     - python-kubernetes >=8.0.0,<31
     - protobuf >=4.21.1,<5
     - pyyaml >=5.3,<7
-    - requests-toolbelt >=0.8.0,<1
+    - requests-toolbelt >=0.8.0,<2
     - tabulate >=0.8.6,<1
     - urllib3 <2.0.0
     - typing-extensions >=3.7.4,<5
